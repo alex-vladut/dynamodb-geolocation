@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "name": "Football game. We need 5 more",
+      "address": "Paris, France",
+      "position": {
+        "lat": 48.856614,
+        "lng": 2.3522219000000177
+      }
+    },
+    {
+      "name": "tennis with friends",
+      "address": "Cluj-Napoca, Romania",
+      "position": {
+        "lat": 46.7712101,
+        "lng": 23.623635299999933
+      }
+    },
+    {
+      "name": "Here is a brand new activity in town. Doesn't matter what kind of activity it is, will be great. Just join now! Don't miss this unique opportunity!",
+      "address": "Cluj-Napoca, Romania",
+      "position": {
+        "lat": 46.7712101,
+        "lng": 23.623635299999933
+      }
+    },
+    {
+      "name": "Let's meet for a nice baseball game, will be fun",
+      "address": "Cluj Arena, Aleea Stadionului, Cluj-Napoca, Romania",
+      "position": {
+        "lat": 46.7684775,
+        "lng": 23.572415999999976
+      }
+    }
+  ]
+}

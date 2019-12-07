@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  geolocation
+
+  Sample SAM Template for geolocation
+  
+Globals:
+  Function:
+    Timeout: 60
+
+Resources:
+  CreateGeolocationTableFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: geolocation/
+      Handler: create-table.lambdaHandler
+      Runtime: nodejs10.x
+      Policies:
+        - AmazonDynamoDBFullAccess
+  CreateItemsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: geolocation/
+      Handler: create-items.lambdaHandler
+      Runtime: nodejs10.x
+      Policies:
+        - AmazonDynamoDBFullAccess
+  QueryItemsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: geolocation/
+      Handler: query.lambdaHandler
+      Runtime: nodejs10.x
+      Policies:
+        - AmazonDynamoDBFullAccess
+Outputs:
+  CreateGeolocationTableFunction:
+    Description: "Lambda Function ARN"
+    Value: !GetAtt CreateGeolocationTableFunction.Arn
+  CreateGeolocationTableFunctionRole:
+    Description: "Implicit IAM Role created for Lambda Function"
+    Value: !GetAtt CreateGeolocationTableFunctionRole.Arn
